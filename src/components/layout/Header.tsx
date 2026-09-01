@@ -83,7 +83,7 @@ export default function Header() {
           </div>
 
           <div className="flex-1 flex justify-center">
-            <Link href="/" className="flex flex-col items-center justify-center group">
+            <Link href="/" className="flex flex-col items-center justify-center group hidden md:flex">
               <span className="font-primary text-4xl font-bold tracking-tight text-brand-dark dark:text-brand-light leading-none">
                 Brand<span className="text-brand-blue">.</span>
               </span>
@@ -250,7 +250,7 @@ export default function Header() {
           {/* Menu Panel */}
           <div className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white dark:bg-brand-dark pb-12 shadow-xl border-r border-brand-gray/10">
             <div className="flex px-6 pt-6 pb-2 justify-between items-center border-b border-brand-gray/10">
-              <span className="font-primary text-2xl font-bold tracking-tight text-brand-dark dark:text-brand-light">
+              <span className="font-primary text-2xl font-bold tracking-tight text-brand-dark dark:text-brand-light hidden md:inline">
                 Brand<span className="text-brand-blue">.</span>
               </span>
               <Button
