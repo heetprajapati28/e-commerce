@@ -280,7 +280,7 @@ export default function ProductClient({ product, suggestedProducts }: ProductCli
           <h2 className="font-serif text-3xl md:text-4xl text-brand-dark dark:text-brand-light mb-8 text-center">
             You Might Also Like
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {suggestedProducts.map((p) => (
               <ProductCard key={p.id} {...p} />
             ))}

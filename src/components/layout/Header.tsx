@@ -138,21 +138,31 @@ export default function Header() {
               </div>
             </div>
 
-            {/* New Arrivals & More Dropdown */}
+            {/* Collections Dropdown */}
             <div className="relative group">
-              <Button variant="outline" icon={<ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />} iconPosition="right">
-                New Arrivals
+              <Button variant="outline" icon={<ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />} iconPosition="right" onClick={() => router.push('/collection')}>
+                Collections
               </Button>
-              <div className="absolute top-[calc(100%+0.5rem)] left-0 w-48 bg-white dark:bg-brand-dark border border-brand-gray/10 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
-                {['This Week', 'This Month', 'Trending Now', 'Back in Stock'].map(item => (
-                  <Link key={item} href={`/new/${item.toLowerCase().replace(/ /g, '-')}`} className="block px-4 py-2.5 text-sm font-medium text-brand-dark/80 hover:text-brand-blue hover:bg-brand-gray/5 dark:text-brand-light/80 dark:hover:text-brand-blue transition-colors">
-                    {item}
+              <div className="absolute top-[calc(100%+0.5rem)] left-0 w-56 bg-white dark:bg-brand-dark border border-brand-gray/10 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+                <Link href="/collection#new-arrivals" className="block px-4 py-2.5 text-sm font-medium text-brand-dark/80 hover:text-brand-blue hover:bg-brand-gray/5 dark:text-brand-light/80 dark:hover:text-brand-blue transition-colors">
+                  New Arrivals
+                </Link>
+                <Link href="/collection#best-sellers" className="block px-4 py-2.5 text-sm font-medium text-brand-dark/80 hover:text-brand-blue hover:bg-brand-gray/5 dark:text-brand-light/80 dark:hover:text-brand-blue transition-colors">
+                  Best Sellers
+                </Link>
+                <div className="my-1 border-t border-brand-gray/10"></div>
+                {[
+                  { name: 'Summer Essentials', id: 'summer-essentials' },
+                  { name: 'Evening Wear', id: 'evening-wear' },
+                  { name: 'Minimalist Core', id: 'minimalist-core' },
+                  { name: 'The Denim Edition', id: 'denim-edition' },
+                  { name: 'Graphic Series', id: 'graphic-series' },
+                ].map(item => (
+                  <Link key={item.id} href={`/collection#${item.id}`} className="block px-4 py-2.5 text-sm font-medium text-brand-dark/80 hover:text-brand-blue hover:bg-brand-gray/5 dark:text-brand-light/80 dark:hover:text-brand-blue transition-colors">
+                    {item.name}
                   </Link>
                 ))}
                 <div className="my-1 border-t border-brand-gray/10"></div>
-                <Link href="/best-sellers" className="block px-4 py-2.5 text-sm font-medium text-brand-dark/80 hover:text-brand-blue hover:bg-brand-gray/5 dark:text-brand-light/80 dark:hover:text-brand-blue transition-colors">
-                  Best Sellers
-                </Link>
                 <Link href="/sale" className="block px-4 py-2.5 text-sm font-medium text-red-500 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-500/10 transition-colors">
                   Sale
                 </Link>
@@ -250,7 +260,7 @@ export default function Header() {
           {/* Menu Panel */}
           <div className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white dark:bg-brand-dark pb-12 shadow-xl border-r border-brand-gray/10">
             <div className="flex px-6 pt-6 pb-2 justify-between items-center border-b border-brand-gray/10">
-              <span className="font-primary text-2xl font-bold tracking-tight text-brand-dark dark:text-brand-light hidden md:inline">
+              <span className="font-primary text-2xl font-bold tracking-tight text-brand-dark dark:text-brand-light md:hidden">
                 Brand<span className="text-brand-blue">.</span>
               </span>
               <Button

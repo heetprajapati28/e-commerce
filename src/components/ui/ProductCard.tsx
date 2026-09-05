@@ -70,41 +70,41 @@ export default function ProductCard({ id, slug, title, price, image, category, a
               variant="outline" 
               size="icon" 
               onClick={(e) => animateAddToCart(e, allImages[currentImageIndex])}
-              className="!bg-white/90 !text-brand-dark !border-transparent hover:!bg-brand-dark hover:!text-white backdrop-blur-sm shadow-sm rounded-full w-10 h-10" 
+              className="!bg-white/90 !text-brand-dark !border-transparent hover:!bg-brand-dark hover:!text-white backdrop-blur-sm shadow-sm rounded-full w-8 h-8 md:w-10 md:h-10" 
               aria-label="Add to Cart"
             >
-              <ShoppingBag className="w-4 h-4" />
+              <ShoppingBag className="w-3 h-3 md:w-4 md:h-4" />
             </Button>
             <Button 
               variant="outline" 
               size="icon" 
               onClick={() => setIsQuickViewOpen(true)}
-              className="!bg-white/90 !text-brand-dark !border-transparent hover:!bg-brand-dark hover:!text-white backdrop-blur-sm shadow-sm rounded-full w-10 h-10" 
+              className="!bg-white/90 !text-brand-dark !border-transparent hover:!bg-brand-dark hover:!text-white backdrop-blur-sm shadow-sm rounded-full w-8 h-8 md:w-10 md:h-10" 
               aria-label="Quick View"
             >
-              <Eye className="w-4 h-4" />
+              <Eye className="w-3 h-3 md:w-4 md:h-4" />
             </Button>
             <Button 
               variant="outline" 
               size="icon" 
               onClick={(e) => animateToWishlist(e, allImages[currentImageIndex])}
-              className="!bg-white/90 !text-brand-dark !border-transparent hover:!bg-brand-dark hover:!text-white backdrop-blur-sm shadow-sm rounded-full w-10 h-10" 
+              className="!bg-white/90 !text-brand-dark !border-transparent hover:!bg-brand-dark hover:!text-white backdrop-blur-sm shadow-sm rounded-full w-8 h-8 md:w-10 md:h-10" 
               aria-label="Wishlist"
             >
-              <Heart className="w-4 h-4" />
+              <Heart className="w-3 h-3 md:w-4 md:h-4" />
             </Button>
           </div>
         </div>
 
         {/* Product Info */}
         <div>
-          <p className="text-sm text-brand-gray dark:text-brand-light/60 font-secondary mb-1">{category}</p>
-          <h3 className="text-lg font-serif text-brand-dark dark:text-brand-light font-medium mb-2">
+          <p className="text-xs md:text-sm text-brand-gray dark:text-brand-light/60 font-secondary mb-1">{category}</p>
+          <h3 className="text-base md:text-lg font-serif text-brand-dark dark:text-brand-light font-medium mb-1 md:mb-2 leading-tight">
             <Link href={productUrl} className="hover:text-brand-blue transition-colors">
               {title}
             </Link>
           </h3>
-          <p className="text-brand-dark dark:text-brand-light font-bold font-secondary">
+          <p className="text-sm md:text-base text-brand-dark dark:text-brand-light font-bold font-secondary">
             ₹{price.toLocaleString('en-IN')}
           </p>
         </div>

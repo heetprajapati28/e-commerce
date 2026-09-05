@@ -30,13 +30,13 @@ export default function CollectionSection() {
     <section className="w-full bg-white dark:bg-brand-dark py-16 sm:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
       <div className="mx-auto max-w-[1440px] w-full">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div className="max-w-2xl w-full text-left">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6">
+          <div className="max-w-2xl w-full text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark dark:text-brand-light mb-4">
               Curated Collections
             </h2>
           </div>
-          <Button variant="outline" icon={<ArrowRight className="w-4 h-4" />} iconPosition="right">
+          <Button variant="outline" className="w-full md:w-auto" icon={<ArrowRight className="w-4 h-4" />} iconPosition="right">
             View All Collections
           </Button>
         </div>

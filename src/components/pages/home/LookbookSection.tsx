@@ -5,15 +5,15 @@ import { Button } from '@/components/ui/Button';
 export default function LookbookSection() {
   return (
     <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto w-full">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-brand-gray/20 pb-8">
-        <div className="max-w-2xl w-full text-left">
+      <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-6 border-b border-brand-gray/20 pb-8">
+        <div className="max-w-2xl w-full text-center md:text-left">
           <p className="text-brand-blue font-bold tracking-[0.2em] uppercase text-sm mb-4 font-secondary">Editorial</p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif text-brand-dark dark:text-brand-light leading-none">
             The Lookbook
           </h2>
         </div>
-        <div className="flex gap-4 items-center">
-          <Button variant="outline" icon={<ArrowRight className="w-4 h-4" />} iconPosition="right">
+        <div className="flex gap-4 items-center w-full md:w-auto">
+          <Button variant="outline" className="w-full" icon={<ArrowRight className="w-4 h-4" />} iconPosition="right">
             Explore All Looks
           </Button>
         </div>

@@ -22,6 +22,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import NewsletterModal from "@/components/layout/NewsletterModal";
+import FloatingSupportButton from "@/components/ui/FloatingSupportButton";
+import CookieBanner from "@/components/layout/CookieBanner";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -35,6 +37,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
           <Footer />
           <NewsletterModal />
+          <FloatingSupportButton />
+          <CookieBanner />
         </SmoothScroll>
       </body>
     </html>
