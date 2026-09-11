@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Menu, Search, User, ShoppingBag, ChevronDown, X, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { PRODUCTS } from '@/data/products';
@@ -84,9 +85,7 @@ export default function Header() {
 
           <div className="flex-1 flex justify-center">
             <Link href="/" className="flex flex-col items-center justify-center group hidden md:flex">
-              <span className="font-primary text-4xl font-bold tracking-tight text-brand-dark dark:text-brand-light leading-none">
-                Brand<span className="text-brand-blue">.</span>
-              </span>
+              <Image src="/logo.webp" alt="Brand Logo" width={150} height={40} className="h-10 w-auto object-contain" priority />
             </Link>
           </div>
 
@@ -260,9 +259,7 @@ export default function Header() {
           {/* Menu Panel */}
           <div className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white dark:bg-brand-dark pb-12 shadow-xl border-r border-brand-gray/10">
             <div className="flex px-6 pt-6 pb-2 justify-between items-center border-b border-brand-gray/10">
-              <span className="font-primary text-2xl font-bold tracking-tight text-brand-dark dark:text-brand-light md:hidden">
-                Brand<span className="text-brand-blue">.</span>
-              </span>
+              <Image src="/logo.webp" alt="Brand Logo" width={120} height={32} className="h-8 w-auto object-contain md:hidden" />
               <Button
                 variant="outline"
                 size="icon"

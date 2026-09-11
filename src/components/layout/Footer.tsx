@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-white dark:bg-brand-dark text-brand-dark dark:text-brand-light py-16 md:py-10 border-t border-brand-gray/40 transition-colors duration-300">
@@ -9,9 +9,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-8">
             <div>
               <Link href="/" className="inline-block">
-                <span className="font-primary text-5xl font-bold tracking-tight text-brand-dark dark:text-brand-light leading-none">
-                  Brand<span className="text-brand-blue">.</span>
-                </span>
+                <Image src="/logo.webp" alt="Brand Logo" width={180} height={48} className="h-12 w-auto object-contain" />
               </Link>
               <p className="mt-4 text-brand-dark/70 dark:text-brand-light/70 max-w-sm font-secondary">
                 Discover our meticulously curated collections of modern fashion and timeless elegance. Elevating your everyday style.
